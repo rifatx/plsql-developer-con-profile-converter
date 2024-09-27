@@ -15,6 +15,7 @@
         }
         textarea {
             width: 100%;
+            resize: none;
         }
         .div-conf {
             width: var(--baseWidth);
@@ -39,22 +40,19 @@
             <tr>
                 <td colspan="2">
                     <div class="div-tns">
-                        <input type="text" class="i-tns" title="tnsnames.ora" placeholder="tnsnames.ora location"
-                            id="txtTnsNamesOra" />
+                        <input type="text" class="i-tns" title="tnsnames.ora" placeholder="tnsnames.ora location" id="txtTnsNamesOra" />
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="div-conf">
-                        <textarea type="text" class="ta-conf" wrap="off"
-                            placeholder="PL/SQL Developer connection profiles" id="txtPlsqlCons"></textarea>
+                        <textarea type="text" class="ta-conf" wrap="off" placeholder="PL/SQL Developer connection profiles" id="txtPlsqlCons"></textarea>
                     </div>
                 </td>
                 <td>
                     <div class="div-conf">
-                        <textarea type="text" class="ta-conf" placeholder="VS Code Oracle plugin connection profiles"
-                            readonly="true" id="txtVscodeCons"></textarea>
+                        <textarea type="text" class="ta-conf" placeholder="VS Code Oracle plugin connection profiles" readonly="true" id="txtVscodeCons"></textarea>
                     </div>
                 </td>
             </tr>
