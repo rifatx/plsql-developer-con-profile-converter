@@ -6,9 +6,9 @@ Site is accessible [here](https://rifatx.github.io/plsql-developer-con-profile-c
 
 # Running locally
 
+- Do `npm install`
 - Run `npm run watch`
-- Spawn an http server. Ex: `python -m http.server 8081`
-- Navigate to _http://localhost:8081_
+- Navigate to _http://localhost:8080_
 
 # References
 
