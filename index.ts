@@ -43,23 +43,23 @@ class ConEntry {
 
     toVscodeOraConTemplate(name: string, tnsAdmin: string): string {
         return `{
-    'authenticationType': 2,
-    'dBAPrivilege': 'None',
-    'userID': '${this.username}',
-    'passwordSaved': true,
-    'password': '${this.decodePassword()}',
-    'dataSource': '${this.database}',
-    'connectionType': 1,
-    'tnsAdmin': '${tnsAdmin}',
-    'useConnectionCredsFromWalletFile': false,
-    'name': '${name}',
-    'color': 'none',
-    'currentSchema': '',
-    'addSettingsScopeToConnectionName': false,
-    'addCurrentSchemaToConnectionName': false,
-    'filters': [],
-    'useCompatibleNamesDirectoryPath': true,
-    'passwordStore': 'Settings'
+    "authenticationType": 2,
+    "dBAPrivilege": "None",
+    "userID": "${this.username}",
+    "passwordSaved": true,
+    "password": "${this.decodePassword()}",
+    "dataSource": "${this.database}",
+    "connectionType": 1,
+    "tnsAdmin": "${tnsAdmin}",
+    "useConnectionCredsFromWalletFile": false,
+    "name": "${name}",
+    "color": "none",
+    "currentSchema": "",
+    "addSettingsScopeToConnectionName": false,
+    "addCurrentSchemaToConnectionName": false,
+    "filters": [],
+    "useCompatibleNamesDirectoryPath": true,
+    "passwordStore": "Settings"
 }`;
     }
 }
