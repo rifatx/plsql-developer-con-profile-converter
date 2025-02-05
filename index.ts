@@ -42,25 +42,7 @@ class ConEntry {
     }
 
     toVscodeOraConTemplate(name: string, tnsAdmin: string): string {
-        return `{
-    "authenticationType": 2,
-    "dBAPrivilege": "None",
-    "userID": "${this.username}",
-    "passwordSaved": true,
-    "password": "${this.decodePassword()}",
-    "dataSource": "${this.database}",
-    "connectionType": 1,
-    "tnsAdmin": "${tnsAdmin}",
-    "useConnectionCredsFromWalletFile": false,
-    "name": "${name}",
-    "color": "none",
-    "currentSchema": "",
-    "addSettingsScopeToConnectionName": false,
-    "addCurrentSchemaToConnectionName": false,
-    "filters": [],
-    "useCompatibleNamesDirectoryPath": true,
-    "passwordStore": "Settings"
-}`;
+        return `connect -save ${name} -savepwd ${this.username}/${this.decodePassword()}@${this.database}`;
     }
 }
 
@@ -120,8 +102,8 @@ function convertPlSqlConList(plsqlCons: string | undefined, tnsNamesOraLocation:
         const objs = cons.filter(function (c) {
             return c.database;
         })
-            .map((c) => c.toVscodeOraConTemplate(c.getHierarchicalName(d), tnsNamesOraLocation)).join(',\n');
-        return `[${objs}]`
+            .map((c) => c.toVscodeOraConTemplate(c.getHierarchicalName(d), tnsNamesOraLocation)).join('\n');
+        return `${objs}`
     }
     return '';
 }
